@@ -1,5 +1,6 @@
-FROM alpine
-COPY entrypoint.sh /
-COPY container /
-RUN chmod +x entrypoint.sh
-ENTRYPOINT ["./entrypoint.sh"]
+# Pull base image 
+From tomcat:8-jre8 
+
+# Maintainer 
+MAINTAINER "valaxytech@gmail.com" 
+COPY ./webapp.war /usr/local/tomcat/webapps
